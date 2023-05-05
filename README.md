@@ -11,6 +11,8 @@ Copy-Item 'C:\Program Files (x86)\Microsoft\Remote Desktop Connection Manager\RD
 
 Import-Module 'C:\temp\RDCMan.dll'
 
+$PwdString = 'the password string you got from within your RDG file'
+
 $EncryptionSettings = New-Object -TypeName RdcMan.EncryptionSettings
 
 [RdcMan.Encryption]::DecryptString($PwdString, $EncryptionSettings)
